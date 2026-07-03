@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Loft San Jorge · Vivienda de autor en Pamplona — ALéa</title>
+<meta name="description" content="Loft San Jorge: reconversión integral de local a vivienda de 2 dormitorios y 2 baños en Paseo Sanduzelai, Pamplona. Diseño cálido, aerotermia con suelo radiante y máxima eficiencia. Comercializa ALéa Expertos Inmobiliarios.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --green:#284139;
+    --green-deep:#1b2e27;
+    --green-soft:#3a5247;
+    --cream:#f6f1e8;
+    --cream-2:#fbf8f2;
+    --sand:#e7dccb;
+    --taupe:#b9a98f;
+    --gold:#a98841;
+    --gold-light:#c9a86a;
+    --ink:#2a2925;
+    --muted:#736d62;
+    --serif:'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+    --sans:'Jost', 'Helvetica Neue', Arial, sans-serif;
+    --maxw:1240px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--sans);
+    color:var(--ink);
+    background:var(--cream-2);
+    font-weight:300;
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  img{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 32px}
+
+  h1,h2,h3,h4{font-family:var(--serif);font-weight:500;line-height:1.08;letter-spacing:.2px}
+  .eyebrow{
+    font-family:var(--sans);
+    font-size:12px;font-weight:500;
+    letter-spacing:.32em;text-transform:uppercase;
+    color:var(--gold);
+    display:inline-flex;align-items:center;gap:14px;
+  }
+  .eyebrow::before{content:"";width:34px;height:1px;background:var(--gold)}
+  .eyebrow.center::after{content:"";width:34px;height:1px;background:var(--gold)}
+  .eyebrow.center{justify-content:center}
+
+  /* ---------- HEADER ---------- */
+  header{
+    position:fixed;top:0;left:0;width:100%;z-index:100;
+    padding:22px 0;
+    transition:all .45s cubic-bezier(.4,0,.2,1);
+  }
+  header .wrap{display:flex;align-items:center;justify-content:space-between}
+  header .logo img{height:54px;width:auto;transition:all .45s ease;filter:drop-shadow(0 2px 12px rgba(0,0,0,.25))}
+  nav.main{display:flex;gap:38px;align-items:center}
+  nav.main a{
+    font-size:12.5px;letter-spacing:.18em;text-transform:uppercase;
+    color:#fff;font-weight:400;opacity:.92;position:relative;padding:4px 0;
+    transition:opacity .3s;
+  }
+  nav.main a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--gold-light);transition:width .35s}
+  nav.main a:hover{opacity:1}
+  nav.main a:hover::after{width:100%}
+  .nav-cta{
+    border:1px solid rgba(255,255,255,.55);
+    padding:11px 22px !important;border-radius:2px;
+    transition:all .35s !important;
+  }
+  .nav-cta:hover{background:var(--gold);border-color:var(--gold);color:var(--green-deep) !important}
+  .nav-cta::after{display:none}
+
+  header.scrolled{background:rgba(27,46,39,.97);padding:12px 0;box-shadow:0 8px 40px rgba(0,0,0,.18);backdrop-filter:blur(6px)}
+  header.scrolled .logo img{height:40px}
+
+  .burger{display:none;flex-direction:column;gap:5px;cursor:pointer;z-index:120;background:none;border:none;padding:6px}
+  .burger span{width:26px;height:2px;background:#fff;transition:.35s}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;min-height:100vh;display:flex;align-items:center;
+    color:#fff;text-align:center;overflow:hidden;
+  }
+  .hero .bg{position:absolute;inset:0;z-index:0}
+  .hero .bg img{width:100%;height:100%;object-fit:cover;animation:slowzoom 18s ease-out forwards}
+  @keyframes slowzoom{from{transform:scale(1.08)}to{transform:scale(1)}}
+  .hero::after{content:"";position:absolute;inset:0;z-index:1;
+    background:linear-gradient(180deg,rgba(20,32,27,.55) 0%,rgba(20,32,27,.32) 38%,rgba(20,32,27,.78) 100%);}
+  .hero .inner{position:relative;z-index:2;width:100%;padding:120px 32px 60px}
+  .hero .kicker{font-size:13px;letter-spacing:.42em;text-transform:uppercase;color:var(--gold-light);margin-bottom:26px}
+  .hero h1{font-size:clamp(3.4rem,8.5vw,7rem);font-weight:500;letter-spacing:1px;text-shadow:0 4px 40px rgba(0,0,0,.4)}
+  .hero h1 em{font-style:italic;color:var(--gold-light);font-weight:400}
+  .hero .sub{font-family:var(--serif);font-size:clamp(1.15rem,2.4vw,1.7rem);font-weight:400;font-style:italic;margin-top:18px;opacity:.95}
+  .hero .loc{margin-top:30px;font-size:13.5px;letter-spacing:.28em;text-transform:uppercase;opacity:.9}
+  .hero .actions{margin-top:46px;display:flex;gap:18px;justify-content:center;flex-wrap:wrap}
+  .btn{
+    font-family:var(--sans);font-size:12.5px;letter-spacing:.2em;text-transform:uppercase;font-weight:500;
+    padding:16px 34px;border-radius:2px;cursor:pointer;transition:all .4s cubic-bezier(.4,0,.2,1);
+    display:inline-flex;align-items:center;gap:10px;border:1px solid transparent;
+  }
+  .btn-gold{background:var(--gold);color:var(--green-deep)}
+  .btn-gold:hover{background:var(--gold-light);transform:translateY(-2px);box-shadow:0 12px 30px rgba(169,136,65,.35)}
+  .btn-ghost{border-color:rgba(255,255,255,.6);color:#fff}
+  .btn-ghost:hover{background:#fff;color:var(--green-deep);transform:translateY(-2px)}
+  .scrolldown{position:absolute;bottom:34px;left:50%;transform:translateX(-50%);z-index:3;display:flex;flex-direction:column;align-items:center;gap:10px;font-size:10.5px;letter-spacing:.3em;text-transform:uppercase;opacity:.8}
+  .scrolldown .line{width:1px;height:46px;background:linear-gradient(var(--gold-light),transparent);animation:pulse 2s infinite}
+  @keyframes pulse{0%,100%{opacity:.3}50%{opacity:1}}
+
+  /* ---------- SECTION BASE ---------- */
+  section{position:relative}
+  .pad{padding:120px 0}
+  .pad-lg{padding:150px 0}
+  .reveal{opacity:0;transform:translateY(40px);transition:opacity 1s cubic-bezier(.2,.6,.2,1),transform 1s cubic-bezier(.2,.6,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+  .delay1{transition-delay:.12s}.delay2{transition-delay:.24s}.delay3{transition-delay:.36s}
+
+  /* ---------- INTRO / CONCEPTO ---------- */
+  .concept{background:var(--cream)}
+  .concept .grid{display:grid;grid-template-columns:1fr 1.05fr;gap:80px;align-items:center}
+  .concept h2{font-size:clamp(2.4rem,4.6vw,3.6rem);margin:22px 0 26px;color:var(--green)}
+  .concept p{color:var(--muted);font-size:1.05rem;margin-bottom:20px;max-width:48ch}
+  .concept .figs{display:flex;gap:14px;margin-top:38px;flex-wrap:wrap}
+  .figchip{border:1px solid var(--sand);padding:14px 22px;border-radius:2px;background:#fff}
+  .figchip b{font-family:var(--serif);font-size:1.9rem;color:var(--green);display:block;line-height:1;font-weight:600}
+  .figchip span{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+  .concept .imgwrap{position:relative}
+  .concept .imgwrap img{border-radius:3px;box-shadow:0 30px 70px rgba(40,65,57,.22);width:100%;height:560px;object-fit:cover}
+  .concept .imgwrap .tag{position:absolute;bottom:-26px;left:-26px;background:var(--green);color:#fff;padding:24px 30px;border-radius:3px;box-shadow:0 20px 50px rgba(0,0,0,.25)}
+  .concept .imgwrap .tag b{font-family:var(--serif);font-size:2.2rem;display:block;line-height:1;color:var(--gold-light);font-weight:600}
+  .concept .imgwrap .tag span{font-size:11px;letter-spacing:.18em;text-transform:uppercase}
+
+  /* ---------- STATS STRIP ---------- */
+  .stats{background:var(--green);color:#fff;padding:78px 0}
+  .stats .row{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;text-align:center}
+  .stats .it b{font-family:var(--serif);font-size:clamp(2.6rem,4vw,3.4rem);font-weight:600;color:var(--gold-light);display:block;line-height:1}
+  .stats .it span{font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;opacity:.85;margin-top:10px;display:block}
+  .stats .it{position:relative}
+  .stats .it:not(:last-child)::after{content:"";position:absolute;right:-15px;top:10%;height:80%;width:1px;background:rgba(255,255,255,.16)}
+
+  /* ---------- GALLERY ---------- */
+  .gallery{background:var(--cream-2)}
+  .sec-head{text-align:center;max-width:680px;margin:0 auto 70px}
+  .sec-head h2{font-size:clamp(2.4rem,5vw,3.8rem);color:var(--green);margin:20px 0 18px}
+  .sec-head p{color:var(--muted);font-size:1.05rem}
+  .gal-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:20px}
+  .gal-item{overflow:hidden;border-radius:3px;position:relative;cursor:pointer;background:var(--sand)}
+  .gal-item img{width:100%;height:100%;object-fit:cover;transition:transform 1.1s cubic-bezier(.2,.6,.2,1)}
+  .gal-item:hover img{transform:scale(1.06)}
+  .gal-item::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(27,46,39,.55));opacity:0;transition:opacity .4s}
+  .gal-item:hover::after{opacity:1}
+  .gal-item .cap{position:absolute;left:24px;bottom:20px;color:#fff;z-index:2;opacity:0;transform:translateY(10px);transition:all .45s}
+  .gal-item:hover .cap{opacity:1;transform:none}
+  .gal-item .cap b{font-family:var(--serif);font-size:1.5rem;display:block;font-weight:500}
+  .gal-item .cap span{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;opacity:.85}
+  .g-a{grid-column:span 7;height:480px}
+  .g-b{grid-column:span 5;height:480px}
+  .g-c{grid-column:span 4;height:380px}
+  .g-d{grid-column:span 4;height:380px}
+  .g-e{grid-column:span 4;height:380px}
+
+  /* ---------- DISTRIBUCION ---------- */
+  .distrib{background:var(--green-deep);color:#fff;overflow:hidden}
+  .distrib-grid{display:grid;grid-template-columns:1.15fr 1fr;gap:70px;align-items:center}
+  .distrib-grid h2{font-size:clamp(2.4rem,4.6vw,3.6rem);margin:20px 0 24px;color:#fff}
+  .distrib-grid h2 em{font-style:italic;color:var(--gold-light)}
+  .distrib-grid .lead{color:rgba(255,255,255,.72);font-size:1.05rem;margin-bottom:36px;max-width:46ch}
+  .surf-table{width:100%;border-collapse:collapse}
+  .surf-table td{padding:13px 0;border-bottom:1px solid rgba(255,255,255,.12);font-size:14.5px}
+  .surf-table td:first-child{color:rgba(255,255,255,.82);letter-spacing:.04em}
+  .surf-table td:last-child{text-align:right;font-family:var(--serif);font-size:1.15rem;color:var(--gold-light);font-weight:500}
+  .surf-table tr.total td{border-bottom:none;padding-top:22px}
+  .surf-table tr.total td:first-child{font-weight:500;color:#fff;text-transform:uppercase;letter-spacing:.16em;font-size:12px}
+  .surf-table tr.total td:last-child{font-size:1.7rem;color:#fff}
+  .plan-imgs{display:flex;flex-direction:column;gap:20px}
+  .plan-imgs .pmain{background:#f4efe6;border-radius:4px;padding:18px;box-shadow:0 30px 70px rgba(0,0,0,.4)}
+  .plan-imgs .pmain img{border-radius:2px;width:100%}
+  .plan-imgs .pcap{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.55);text-align:center}
+
+  /* ---------- CALIDADES ---------- */
+  .calidades{background:var(--cream)}
+  .feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-top:64px}
+  .feat{background:#fff;border:1px solid var(--sand);border-radius:4px;padding:42px 34px;transition:all .5s cubic-bezier(.2,.6,.2,1)}
+  .feat:hover{transform:translateY(-8px);box-shadow:0 30px 60px rgba(40,65,57,.14);border-color:var(--gold-light)}
+  .feat .ic{width:52px;height:52px;color:var(--green);margin-bottom:24px}
+  .feat .ic svg{width:100%;height:100%;stroke:var(--green);stroke-width:1.3;fill:none}
+  .feat h3{font-size:1.55rem;color:var(--green);margin-bottom:12px}
+  .feat p{color:var(--muted);font-size:.98rem}
+
+  /* ---------- UBICACION ---------- */
+  .ubic{background:var(--cream-2)}
+  .ubic-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border-radius:4px;overflow:hidden;box-shadow:0 30px 70px rgba(40,65,57,.16)}
+  .ubic-grid .txt{background:var(--green);color:#fff;padding:72px 60px;display:flex;flex-direction:column;justify-content:center}
+  .ubic-grid .txt h2{font-size:clamp(2.2rem,4vw,3.2rem);margin:18px 0 22px;color:#fff}
+  .ubic-grid .txt p{color:rgba(255,255,255,.76);margin-bottom:18px;max-width:42ch}
+  .ubic-list{list-style:none;margin-top:14px}
+  .ubic-list li{padding:13px 0;border-top:1px solid rgba(255,255,255,.14);display:flex;align-items:center;gap:14px;font-size:14.5px}
+  .ubic-list li svg{width:18px;height:18px;stroke:var(--gold-light);stroke-width:1.5;fill:none;flex-shrink:0}
+  .ubic-grid .map{position:relative;min-height:520px}
+  .ubic-grid .map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:grayscale(.25) contrast(1.02)}
+  .ubic-photos{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:24px}
+  .ubic-photos img{width:100%;height:300px;object-fit:cover;border-radius:3px}
+
+  /* ---------- CARRUSEL + VIDEO ---------- */
+  .videoblk{background:var(--green-deep)}
+  .carousel{position:relative;border-radius:5px;overflow:hidden;box-shadow:0 40px 90px rgba(0,0,0,.45);background:#000}
+  .carousel .viewport{overflow:hidden}
+  .carousel .track{display:flex;transition:transform .7s cubic-bezier(.4,0,.2,1)}
+  .carousel .slide{min-width:100%;position:relative}
+  .carousel .slide img{width:100%;height:640px;object-fit:cover;display:block}
+  .carousel .scap{position:absolute;left:0;bottom:0;width:100%;padding:64px 44px 30px;background:linear-gradient(transparent,rgba(15,24,20,.82));color:#fff}
+  .carousel .scap b{font-family:var(--serif);font-size:1.8rem;font-weight:500;display:block;line-height:1.1}
+  .carousel .scap span{font-size:11px;letter-spacing:.2em;text-transform:uppercase;opacity:.82}
+  .cbtn{position:absolute;top:50%;transform:translateY(-50%);z-index:5;width:54px;height:54px;border-radius:50%;border:1px solid rgba(255,255,255,.45);background:rgba(15,24,20,.32);color:#fff;font-size:24px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .35s;backdrop-filter:blur(4px)}
+  .cbtn:hover{background:var(--gold);border-color:var(--gold);color:var(--green-deep)}
+  .cbtn.prev{left:24px}.cbtn.next{right:24px}
+  .dots{display:flex;gap:9px;justify-content:center;position:absolute;bottom:24px;left:0;width:100%;z-index:5}
+  .dots button{width:9px;height:9px;border-radius:50%;border:none;background:rgba(255,255,255,.45);cursor:pointer;transition:all .35s;padding:0}
+  .dots button.active{background:var(--gold-light);width:26px;border-radius:5px}
+  .videoblk .frame{position:relative;border-radius:5px;overflow:hidden;box-shadow:0 40px 90px rgba(0,0,0,.45);margin-top:34px}
+  .videoblk video{width:100%;display:block}
+
+  /* ---------- INVERSION ---------- */
+  .invest{background:var(--cream)}
+  .invest-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:60px}
+  .invest .card{padding:36px 28px;border-left:2px solid var(--gold);background:#fff;border-radius:0 4px 4px 0;box-shadow:0 14px 40px rgba(40,65,57,.07)}
+  .invest .card .n{font-family:var(--serif);font-size:1.2rem;color:var(--gold);letter-spacing:.1em}
+  .invest .card h4{font-size:1.35rem;color:var(--green);margin:10px 0 8px}
+  .invest .card p{font-size:.95rem;color:var(--muted)}
+
+  /* ---------- CTA / CONTACTO ---------- */
+  .cta{background:var(--green);color:#fff;text-align:center;position:relative;overflow:hidden}
+  .cta::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,rgba(169,136,65,.18),transparent 60%)}
+  .cta .inner{position:relative;z-index:2}
+  .cta h2{font-size:clamp(2.6rem,5.5vw,4.4rem);color:#fff;margin:22px 0 20px}
+  .cta h2 em{font-style:italic;color:var(--gold-light)}
+  .cta p{max-width:560px;margin:0 auto 44px;color:rgba(255,255,255,.78);font-size:1.08rem}
+  .contact-form{max-width:680px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:18px;text-align:left}
+  .contact-form .full{grid-column:1/-1}
+  .contact-form label{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-light);display:block;margin-bottom:8px}
+  .contact-form input,.contact-form textarea{
+    width:100%;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.2);
+    border-radius:2px;padding:14px 16px;color:#fff;font-family:var(--sans);font-size:14.5px;font-weight:300;
+    transition:border-color .3s,background .3s;
+  }
+  .contact-form input:focus,.contact-form textarea:focus{outline:none;border-color:var(--gold-light);background:rgba(255,255,255,.1)}
+  .contact-form input::placeholder,.contact-form textarea::placeholder{color:rgba(255,255,255,.4)}
+  .contact-form textarea{resize:vertical;min-height:120px}
+  .contact-form .btn-gold{justify-content:center;width:100%;border:none}
+  .cta .direct{margin-top:40px;display:flex;gap:40px;justify-content:center;flex-wrap:wrap;font-size:14px}
+  .cta .direct a{display:inline-flex;align-items:center;gap:10px;letter-spacing:.04em}
+  .cta .direct svg{width:18px;height:18px;stroke:var(--gold-light);stroke-width:1.5;fill:none}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:var(--green-deep);color:rgba(255,255,255,.6);padding:64px 0 36px;font-size:13px}
+  footer .top{display:flex;justify-content:space-between;align-items:flex-start;gap:40px;flex-wrap:wrap;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.1)}
+  footer .logo img{height:64px;margin-bottom:18px}
+  footer .col h5{font-family:var(--sans);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-light);margin-bottom:16px;font-weight:500}
+  footer .col p,footer .col a{display:block;margin-bottom:8px;line-height:1.6}
+  footer .col a:hover{color:#fff}
+  footer .legal{padding-top:28px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:11.5px;opacity:.7}
+  footer .legal .disc{max-width:60ch;line-height:1.6}
+
+  /* ---------- LIGHTBOX ---------- */
+  .lightbox{position:fixed;inset:0;background:rgba(15,24,20,.95);z-index:200;display:none;align-items:center;justify-content:center;padding:40px;cursor:zoom-out}
+  .lightbox.open{display:flex}
+  .lightbox img{max-width:92vw;max-height:88vh;border-radius:3px;box-shadow:0 30px 90px rgba(0,0,0,.6)}
+  .lightbox .close{position:absolute;top:28px;right:34px;color:#fff;font-size:34px;cursor:pointer;font-family:var(--serif);line-height:1}
+
+  /* ---------- RESPONSIVE ---------- */
+  @media(max-width:980px){
+    .concept .grid,.distrib-grid,.ubic-grid{grid-template-columns:1fr;gap:48px}
+    .ubic-grid .txt{padding:54px 38px}
+    .ubic-grid .map{min-height:380px}
+    .stats .row{grid-template-columns:repeat(2,1fr);gap:44px 20px}
+    .stats .it:nth-child(2)::after{display:none}
+    .feat-grid{grid-template-columns:1fr 1fr}
+    .invest-grid{grid-template-columns:1fr 1fr}
+    .gal-grid{grid-template-columns:1fr 1fr}
+    .g-a,.g-b,.g-c,.g-d,.g-e{grid-column:span 1;height:340px}
+    .concept .imgwrap img{height:440px}
+    .carousel .slide img{height:460px}
+  }
+  @media(max-width:680px){
+    .wrap{padding:0 22px}
+    nav.main{position:fixed;inset:0;background:var(--green-deep);flex-direction:column;justify-content:center;gap:30px;transform:translateX(100%);transition:transform .5s cubic-bezier(.4,0,.2,1)}
+    nav.main.open{transform:none}
+    nav.main a{font-size:16px}
+    .burger{display:flex}
+    header.scrolled{padding:12px 0}
+    .pad,.pad-lg{padding:80px 0}
+    .stats .row{grid-template-columns:1fr 1fr;gap:38px 16px}
+    .feat-grid,.invest-grid{grid-template-columns:1fr}
+    .gal-grid{grid-template-columns:1fr}
+    .contact-form{grid-template-columns:1fr}
+    .concept .imgwrap .tag{left:0;bottom:-20px;padding:18px 22px}
+    .hero .actions{flex-direction:column}
+    .btn{width:100%;justify-content:center}
+    .ubic-photos{grid-template-columns:1fr}
+    .ubic-photos img{height:240px}
+    .carousel .slide img{height:320px}
+    .carousel .scap{padding:48px 24px 26px}
+    .carousel .scap b{font-size:1.4rem}
+    .cbtn{width:44px;height:44px;font-size:20px}
+    .cbtn.prev{left:14px}.cbtn.next{right:14px}
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header id="hdr">
+  <div class="wrap">
+    <a href="#inicio" class="logo"><img src="img/logo-white.png" alt="ALéa Expertos Inmobiliarios"></a>
+    <button class="burger" id="burger" aria-label="Menú"><span></span><span></span><span></span></button>
+    <nav class="main" id="nav">
+      <a href="#proyecto">Proyecto</a>
+      <a href="#galeria">Galería</a>
+      <a href="#distribucion">Distribución</a>
+      <a href="#calidades">Calidades</a>
+      <a href="#ubicacion">Ubicación</a>
+      <a href="#contacto" class="nav-cta">Solicitar dossier</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="inicio">
+  <div class="bg"><img src="img/fachada-atardecer.png" alt="Fachada del Loft San Jorge al atardecer"></div>
+  <div class="inner">
+    <p class="kicker">Pamplona · Paseo Sanduzelai</p>
+    <h1>Loft <em>San&nbsp;Jorge</em></h1>
+    <p class="sub">Una vivienda de autor donde antes había un local</p>
+    <p class="loc">2 Dormitorios&nbsp;&nbsp;·&nbsp;&nbsp;2 Baños&nbsp;&nbsp;·&nbsp;&nbsp;55,68 m² útiles&nbsp;&nbsp;·&nbsp;&nbsp;Aerotermia</p>
+    <div class="actions">
+      <a href="#contacto" class="btn btn-gold">Solicitar información</a>
+      <a href="#galeria" class="btn btn-ghost">Ver el proyecto</a>
+    </div>
+  </div>
+  <div class="scrolldown"><span>Descubrir</span><div class="line"></div></div>
+</section>
+
+<!-- ===== CONCEPTO ===== -->
+<section class="concept pad" id="proyecto">
+  <div class="wrap">
+    <div class="grid">
+      <div class="reveal">
+        <span class="eyebrow">El proyecto</span>
+        <h2>Reconvertir un espacio.<br>Crear un hogar.</h2>
+        <p>Loft San Jorge nace de la transformación integral de un local comercial en una vivienda contemporánea, luminosa y eficiente en pleno barrio de San Jorge, Pamplona.</p>
+        <p>Un proyecto de arquitectura redactado y visado por el COAVN, concebido desde cero: nueva distribución, suelo elevado para garantizar privacidad y aislamiento, y unos acabados cálidos pensados para vivir bien cada día.</p>
+        <div class="figs">
+          <div class="figchip"><b>66,57</b><span>m² construidos</span></div>
+          <div class="figchip"><b>2+2</b><span>Dorm. y baños</span></div>
+          <div class="figchip"><b>2025</b><span>Proyecto visado</span></div>
+        </div>
+      </div>
+      <div class="reveal delay1">
+        <div class="imgwrap">
+          <img src="img/salon-comedor.png" alt="Salón comedor del Loft San Jorge">
+          <div class="tag"><b>Estar–cocina</b><span>18,80 m² de luz</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== STATS ===== -->
+<section class="stats">
+  <div class="wrap">
+    <div class="row">
+      <div class="it reveal"><b>55,68</b><span>m² útiles</span></div>
+      <div class="it reveal delay1"><b>2 + 2</b><span>Dormitorios y baños</span></div>
+      <div class="it reveal delay2"><b>A·A·A</b><span>Aerotermia + suelo radiante</span></div>
+      <div class="it reveal delay3"><b>Baja</b><span>Planta con acceso propio</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GALERIA ===== -->
+<section class="gallery pad" id="galeria">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow center">Así se vivirá</span>
+      <h2>El interior</h2>
+      <p>Infografías del proyecto: una paleta cálida de maderas naturales y tonos neutros, líneas limpias y luz natural en cada estancia.</p>
+    </div>
+    <div class="gal-grid">
+      <div class="gal-item g-a reveal" data-full="img/dormitorio-principal.jpg">
+        <img src="img/dormitorio-principal.jpg" alt="Dormitorio principal">
+        <div class="cap"><b>Dormitorio principal</b><span>12,02 m²</span></div>
+      </div>
+      <div class="gal-item g-b reveal delay1" data-full="img/cocina.png">
+        <img src="img/cocina.png" alt="Zona de cocina">
+        <div class="cap"><b>Zona de cocina</b><span>Sin cocina ni armarios incluidos</span></div>
+      </div>
+      <div class="gal-item g-c reveal" data-full="img/dormitorio-bano.png">
+        <img src="img/dormitorio-bano.png" alt="Dormitorio principal con acceso al baño">
+        <div class="cap"><b>Dormitorio principal</b><span>Acceso al baño</span></div>
+      </div>
+      <div class="gal-item g-d reveal delay1" data-full="img/bano.png">
+        <img src="img/bano.png" alt="Baño principal">
+        <div class="cap"><b>Baño principal</b><span>Ducha y mueble suspendido</span></div>
+      </div>
+      <div class="gal-item g-e reveal delay2" data-full="img/salon-comedor.png">
+        <img src="img/salon-comedor.png" alt="Salón comedor">
+        <div class="cap"><b>Salón – comedor</b><span>Espacio abierto</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== DISTRIBUCION ===== -->
+<section class="distrib pad-lg" id="distribucion">
+  <div class="wrap">
+    <div class="distrib-grid">
+      <div class="reveal">
+        <span class="eyebrow">Distribución</span>
+        <h2>Cada metro,<br><em>aprovechado.</em></h2>
+        <p class="lead">Un programa completo de vivienda en planta baja: dos dormitorios, dos piezas de baño, estar-cocina diáfano y zona de lavadero y tendedero independiente.</p>
+        <table class="surf-table">
+          <tr><td>Dormitorio principal</td><td>12,02 m²</td></tr>
+          <tr><td>Dormitorio secundario</td><td>9,25 m²</td></tr>
+          <tr><td>Estar – cocina</td><td>18,80 m²</td></tr>
+          <tr><td>Baño</td><td>3,69 m²</td></tr>
+          <tr><td>Aseo</td><td>2,89 m²</td></tr>
+          <tr><td>Despensa</td><td>2,00 m²</td></tr>
+          <tr><td>Distribuidor</td><td>2,68 m²</td></tr>
+          <tr><td>Lavadero</td><td>1,84 m²</td></tr>
+          <tr class="total"><td>Superficie útil total</td><td>55,68 m²</td></tr>
+        </table>
+      </div>
+      <div class="reveal delay1">
+        <div class="plan-imgs">
+          <div class="pmain" data-full="img/plano-3d.png" style="cursor:zoom-in">
+            <img src="img/plano-3d.png" alt="Plano 3D de la distribución">
+          </div>
+          <p class="pcap">Distribución orientativa · Planta baja</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CALIDADES ===== -->
+<section class="calidades pad" id="calidades">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow center">Calidades & eficiencia</span>
+      <h2>Confort que no se ve,<br>se siente</h2>
+      <p>Una vivienda pensada para el bienestar y el bajo consumo durante todo el año.</p>
+    </div>
+    <div class="feat-grid">
+      <div class="feat reveal">
+        <div class="ic"><svg viewBox="0 0 48 48"><path d="M24 4v40M10 14c0 8 7 10 7 18M38 14c0 8-7 10-7 18M24 8c0 6 6 8 6 14"/></svg></div>
+        <h3>Aerotermia</h3>
+        <p>Climatización mediante bomba de calor por aerotermia, una de las tecnologías más eficientes y sostenibles del mercado. Calor y agua caliente con mínimo consumo.</p>
+      </div>
+      <div class="feat reveal delay1">
+        <div class="ic"><svg viewBox="0 0 48 48"><path d="M6 30h36M6 38h36M12 30c0-6 4-6 4-12s-4-6-4-12M24 30c0-6 4-6 4-12s-4-6-4-12M36 30c0-6 4-6 4-12s-4-6-4-12"/></svg></div>
+        <h3>Suelo radiante</h3>
+        <p>Calor uniforme desde el suelo, sin radiadores a la vista. Mayor sensación de confort, libertad total de decoración y temperatura homogénea en toda la vivienda.</p>
+      </div>
+      <div class="feat reveal delay2">
+        <div class="ic"><svg viewBox="0 0 48 48"><rect x="8" y="6" width="32" height="36" rx="2"/><path d="M24 6v36M8 24h32"/></svg></div>
+        <h3>Carpintería PVC</h3>
+        <p>Ventanas de PVC de triple cámara con doble acristalamiento bajo emisivo: máximo aislamiento térmico y acústico frente al exterior.</p>
+      </div>
+      <div class="feat reveal">
+        <div class="ic"><svg viewBox="0 0 48 48"><path d="M4 18c8-6 14 6 22 0s14-6 18-2M4 30c8-6 14 6 22 0s14-6 18-2"/></svg></div>
+        <h3>Ventilación mecánica</h3>
+        <p>Sistema de extracción mecánica en cocina y baños que garantiza aire renovado y salubridad, evacuando la humedad hacia cubierta.</p>
+      </div>
+      <div class="feat reveal delay1">
+        <div class="ic"><svg viewBox="0 0 48 48"><path d="M6 38h36M10 38V20l14-10 14 10v18M18 38V28h12v10"/></svg></div>
+        <h3>Suelo elevado</h3>
+        <p>La vivienda se eleva sobre la rasante de la calle, aportando privacidad frente al exterior y alojando las instalaciones del suelo radiante.</p>
+      </div>
+      <div class="feat reveal delay2">
+        <div class="ic"><svg viewBox="0 0 48 48"><path d="M24 4l4 8 9 1-6.5 6 1.5 9-8-4.5-8 4.5 1.5-9L11 13l9-1zM24 30v14"/></svg></div>
+        <h3>Proyecto visado</h3>
+        <p>Proyecto de arquitectura redactado por IMPAR Roncal&nbsp;Basterra y visado por el COAVN. Un desarrollo real, técnico y licenciable, no una idea sobre plano.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== VIDEO ===== -->
+<section class="videoblk pad">
+  <div class="wrap">
+    <div class="sec-head reveal" style="margin-bottom:48px">
+      <span class="eyebrow center" style="color:var(--gold-light)">Recorrido</span>
+      <h2 style="color:#fff">Conoce el espacio</h2>
+    </div>
+    <div class="carousel reveal delay1" id="carousel">
+      <div class="viewport">
+        <div class="track" id="track">
+          <div class="slide"><img src="img/salon-comedor.png" alt="Salón comedor"><div class="scap"><b>Salón – comedor</b><span>Espacio abierto · 18,80 m²</span></div></div>
+          <div class="slide"><img src="img/dormitorio-principal.jpg" alt="Dormitorio principal"><div class="scap"><b>Dormitorio principal</b><span>12,02 m²</span></div></div>
+          <div class="slide"><img src="img/dormitorio-bano.png" alt="Dormitorio principal con acceso al baño"><div class="scap"><b>Dormitorio principal</b><span>Acceso al baño</span></div></div>
+          <div class="slide"><img src="img/cocina.png" alt="Zona de cocina"><div class="scap"><b>Zona de cocina</b><span>Sin cocina ni armarios incluidos — imagen orientativa</span></div></div>
+          <div class="slide"><img src="img/bano.png" alt="Baño principal"><div class="scap"><b>Baño principal</b><span>Ducha y mueble suspendido</span></div></div>
+          <div class="slide"><img src="img/plano-3d.png" alt="Distribución en 3D"><div class="scap"><b>Distribución 3D</b><span>Planta baja</span></div></div>
+          <div class="slide"><img src="img/plano-tecnico.jpg" alt="Plano técnico acotado"><div class="scap"><b>Plano acotado</b><span>Superficies útiles</span></div></div>
+          <div class="slide"><img src="img/fachada-atardecer.png" alt="Fachada al atardecer"><div class="scap"><b>Fachada</b><span>Paseo Sanduzelai</span></div></div>
+          <div class="slide"><img src="img/acceso-entrada.png" alt="Acceso y entrada"><div class="scap"><b>Acceso</b><span>Entrada independiente</span></div></div>
+          <div class="slide"><img src="img/esquina-edificio.png" alt="Edificio en esquina"><div class="scap"><b>Edificio</b><span>Ubicación en esquina</span></div></div>
+        </div>
+      </div>
+      <button class="cbtn prev" id="cprev" aria-label="Imagen anterior">&#8249;</button>
+      <button class="cbtn next" id="cnext" aria-label="Imagen siguiente">&#8250;</button>
+      <div class="dots" id="dots"></div>
+    </div>
+    <div class="frame reveal delay2">
+      <video controls preload="metadata" poster="img/salon-comedor.png">
+        <source src="img/video-loft.mp4" type="video/mp4">
+        Tu navegador no admite la reproducción de vídeo.
+      </video>
+    </div>
+  </div>
+</section>
+
+<!-- ===== UBICACION ===== -->
+<section class="ubic pad" id="ubicacion">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow center">Ubicación</span>
+      <h2>Paseo Sanduzelai, Pamplona</h2>
+      <p>Un barrio consolidado y bien comunicado, con todos los servicios a pie de calle.</p>
+    </div>
+    <div class="ubic-grid reveal">
+      <div class="txt">
+        <span class="eyebrow" style="color:var(--gold-light)">San Jorge · Navarra</span>
+        <h2>En esquina,<br>con acceso propio</h2>
+        <p>El Loft ocupa la planta baja en esquina de un edificio residencial consolidado, con entrada independiente desde la calle y orientación que garantiza luz natural durante el día.</p>
+        <ul class="ubic-list">
+          <li><svg viewBox="0 0 24 24"><path d="M12 2C8 2 5 5 5 9c0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg> Paseo Sanduzelai 23, bajo — Pamplona</li>
+          <li><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg> Edificio residencial consolidado</li>
+          <li><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg> Acceso independiente a pie de calle</li>
+          <li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> Servicios, comercio y transporte cercanos</li>
+        </ul>
+      </div>
+      <div class="map">
+        <iframe loading="lazy" src="https://maps.google.com/maps?q=Paseo%20Sanduzelai%2023%2C%20Pamplona&t=&z=15&ie=UTF8&iwloc=&output=embed" title="Mapa de ubicación"></iframe>
+      </div>
+    </div>
+    <div class="ubic-photos">
+      <img src="img/esquina-edificio.png" alt="Vista de la esquina del edificio" class="reveal" data-full="img/esquina-edificio.png" style="cursor:zoom-in">
+      <img src="img/acceso-entrada.png" alt="Acceso y entrada" class="reveal delay1" data-full="img/acceso-entrada.png" style="cursor:zoom-in">
+      <img src="img/fachada-atardecer.png" alt="Fachada al atardecer" class="reveal delay2" data-full="img/fachada-atardecer.png" style="cursor:zoom-in">
+    </div>
+  </div>
+</section>
+
+<!-- ===== INVERSION ===== -->
+<section class="invest pad" >
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow center">Por qué Loft San Jorge</span>
+      <h2>Una oportunidad sólida</h2>
+      <p>Producto líquido, eficiente y diferencial en una zona con demanda estable.</p>
+    </div>
+    <div class="invest-grid">
+      <div class="card reveal"><div class="n">01</div><h4>Llave en mano</h4><p>Proyecto definido y visado, listo para ejecución. Sin incertidumbre técnica.</p></div>
+      <div class="card reveal delay1"><div class="n">02</div><h4>Alta eficiencia</h4><p>Aerotermia y aislamiento que reducen el consumo y revalorizan el activo.</p></div>
+      <div class="card reveal delay2"><div class="n">03</div><h4>Producto demandado</h4><p>Dos dormitorios en planta baja: el formato más buscado para vivir o alquilar.</p></div>
+      <div class="card reveal delay3"><div class="n">04</div><h4>Diseño diferencial</h4><p>Una vivienda con carácter, lejos del producto estándar del mercado.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA / CONTACTO ===== -->
+<section class="cta pad-lg" id="contacto">
+  <div class="wrap inner">
+    <span class="eyebrow center" style="color:var(--gold-light)">Hablemos</span>
+    <h2>Solicite el <em>dossier completo</em></h2>
+    <p>Reciba la memoria de calidades, los planos y la información comercial del Loft San Jorge. Le atenderemos personalmente.</p>
+    <form class="contact-form" id="leadForm">
+      <div>
+        <label>Nombre</label>
+        <input type="text" name="nombre" placeholder="Su nombre" required>
+      </div>
+      <div>
+        <label>Teléfono</label>
+        <input type="tel" name="telefono" placeholder="Su teléfono">
+      </div>
+      <div class="full">
+        <label>Email</label>
+        <input type="email" name="email" placeholder="su@email.com" required>
+      </div>
+      <div class="full">
+        <label>Mensaje</label>
+        <textarea name="mensaje" placeholder="Estoy interesado/a en el Loft San Jorge…"></textarea>
+      </div>
+      <div class="full">
+        <button type="submit" class="btn btn-gold">Enviar solicitud</button>
+      </div>
+    </form>
+    <div class="direct">
+      <a href="tel:+34621398509"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3-8.6A2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.3 1.8.6 2.6a2 2 0 01-.5 2.1L8.1 9.9a16 16 0 006 6l1.5-1.1a2 2 0 012.1-.5c.8.3 1.7.5 2.6.6a2 2 0 011.7 2z"/></svg> +34 621 39 85 09</a>
+      <a href="mailto:contacto@inmoalea.es"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 6 10-6"/></svg> contacto@inmoalea.es</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="wrap">
+    <div class="top">
+      <div class="col">
+        <div class="logo"><img src="img/logo-white.png" alt="ALéa Expertos Inmobiliarios"></div>
+        <p>Expertos inmobiliarios.<br>Comercialización del proyecto Loft San Jorge.</p>
+      </div>
+      <div class="col">
+        <h5>Proyecto</h5>
+        <a href="#proyecto">El proyecto</a>
+        <a href="#galeria">Galería</a>
+        <a href="#distribucion">Distribución</a>
+        <a href="#calidades">Calidades</a>
+      </div>
+      <div class="col">
+        <h5>Contacto</h5>
+        <a href="tel:+34621398509">+34 621 39 85 09</a>
+        <a href="mailto:contacto@inmoalea.es">contacto@inmoalea.es</a>
+        <p>Paseo Sanduzelai 23, Pamplona</p>
+      </div>
+      <div class="col">
+        <h5>Ficha técnica</h5>
+        <p>Vivienda · 55,68 m² útiles</p>
+        <p>2 dorm. · 2 baños</p>
+        <p>Proyecto visado COAVN 2025</p>
+        <p>Arquitectura: IMPAR Roncal Basterra</p>
+      </div>
+    </div>
+    <div class="legal">
+      <p class="disc">Infografías e imágenes orientativas y no contractuales. La vivienda se entrega sin cocina ni armarios montados. Las superficies se indican según proyecto y pueden experimentar variaciones durante la ejecución de obra. Documento de carácter comercial e informativo.</p>
+      <p>© 2026 ALéa Expertos Inmobiliarios</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== LIGHTBOX ===== -->
+<div class="lightbox" id="lightbox"><span class="close">&times;</span><img src="" alt=""></div>
+
+<script>
+  // Header scroll state
+  const hdr=document.getElementById('hdr');
+  window.addEventListener('scroll',()=>{hdr.classList.toggle('scrolled',window.scrollY>60)});
+
+  // Mobile menu
+  const burger=document.getElementById('burger'),nav=document.getElementById('nav');
+  burger.addEventListener('click',()=>{nav.classList.toggle('open');burger.classList.toggle('active')});
+  nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+
+  // Reveal on scroll
+  const io=new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})
+  },{threshold:0.14});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  // Lightbox
+  const lb=document.getElementById('lightbox'),lbImg=lb.querySelector('img');
+  document.querySelectorAll('[data-full]').forEach(el=>{
+    el.addEventListener('click',()=>{lbImg.src=el.getAttribute('data-full');lb.classList.add('open')});
+  });
+  lb.addEventListener('click',()=>lb.classList.remove('open'));
+
+  // Carrusel
+  (function(){
+    const track=document.getElementById('track');
+    if(!track)return;
+    const total=track.children.length;
+    const dotsWrap=document.getElementById('dots');
+    let i=0,timer;
+    for(let k=0;k<total;k++){
+      const b=document.createElement('button');
+      if(k===0)b.classList.add('active');
+      b.setAttribute('aria-label','Ir a la imagen '+(k+1));
+      b.addEventListener('click',()=>go(k));
+      dotsWrap.appendChild(b);
+    }
+    const dots=dotsWrap.children;
+    function go(n){
+      i=(n+total)%total;
+      track.style.transform='translateX(-'+(i*100)+'%)';
+      for(let k=0;k<total;k++)dots[k].classList.toggle('active',k===i);
+      reset();
+    }
+    function reset(){clearInterval(timer);timer=setInterval(()=>go(i+1),5000)}
+    document.getElementById('cnext').addEventListener('click',()=>go(i+1));
+    document.getElementById('cprev').addEventListener('click',()=>go(i-1));
+    reset();
+  })();
+
+  // Lead form -> mailto
+  document.getElementById('leadForm').addEventListener('submit',function(e){
+    e.preventDefault();
+    const f=e.target;
+    const subject=encodeURIComponent('Interés en Loft San Jorge');
+    const body=encodeURIComponent(
+      'Nombre: '+f.nombre.value+'\n'+
+      'Teléfono: '+f.telefono.value+'\n'+
+      'Email: '+f.email.value+'\n\n'+
+      'Mensaje:\n'+f.mensaje.value
+    );
+    window.location.href='mailto:contacto@inmoalea.es?subject='+subject+'&body='+body;
+  });
+</script>
+</body>
+</html>
